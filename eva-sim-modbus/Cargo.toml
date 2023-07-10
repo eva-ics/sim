@@ -2,8 +2,12 @@
 name = "eva-sim-modbus"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Serhij S. <div@altertech.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/eva-ics/sim"
+description = "EVA ICS Virtual Fieldbus Simulator"
+readme = "README.md"
+keywords = ["modbus", "server", "hardware", "nostd"]
 
 [dependencies]
 busrt = { version = "0.4.6", features = ["rpc"] }
