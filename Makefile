@@ -7,3 +7,4 @@ ver:
 release:
 	ansible-playbook -i lab-builder1, ./dev/update.yml
 	ssh -t lab-builder1 ". ~/.cargo/env && cd /build/sim && git checkout main && ./dev/build-and-release.py"
+	rci job run pub.bma.ai
