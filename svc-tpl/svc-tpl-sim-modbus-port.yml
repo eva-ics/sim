@@ -1,0 +1,11 @@
+command: /opt/workstuff/sim/modbus-port/target/debug/sim-modbus-port
+bus:
+  path: var/bus.ipc
+config:
+  listen:
+    - path: 127.0.0.1:5505
+      protocol: tcp
+    #- path: /dev/ttyS0:9600:8:N:1
+      #protocol: rtu
+  verbose: true
+user: nobody

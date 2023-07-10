@@ -1,0 +1,8 @@
+command: /opt/workstuff/sim/modbus-generic/target/debug/sim-modbus-generic
+bus:
+  path: var/bus.ipc
+config:
+  port_svc: sim.modbus.tcp1
+  unit: 1
+  persistent: true
+user: eva

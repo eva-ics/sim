@@ -1,0 +1,13 @@
+[workspace]
+
+members = [
+  "modbus-port",
+  "modbus-generic",
+  "modbus-sensor",
+  "modbus-relay",
+]
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1

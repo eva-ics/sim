@@ -1,0 +1,16 @@
+command: /opt/workstuff/sim/modbus-sensor/target/debug/sim-modbus-sensor
+bus:
+  path: var/bus.ipc
+config:
+  port_svc: sim.modbus.tcp1
+  unit: 2
+  # possible values: none, random, timestamp, counter, udp
+  source:
+    kind: none
+    # port: 20000 # for udp
+    # long_float: true # for Matlab Simulink default UDP sink
+  # INT, UINT, DINT, UDINT, LINT, ULINT, REAL or REALB (IEEE-754 big-endian)
+  type: UINT
+  # h for h@0 (holding), i for i@0 (input)
+  reg: h
+user: nobody

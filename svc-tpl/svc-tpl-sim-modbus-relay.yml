@@ -1,0 +1,11 @@
+command: /opt/workstuff/sim/modbus-relay/target/debug/sim-modbus-relay
+bus:
+  path: var/bus.ipc
+config:
+  port_svc: sim.modbus.tcp1
+  unit: 3
+  # h for h@0 (holding, bit per port), c for coil 0-7
+  reg: c
+  # boolean (true/false) or number (0/1)
+  output_type: number
+user: nobody
