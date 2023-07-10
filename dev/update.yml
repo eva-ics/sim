@@ -1,0 +1,10 @@
+- hosts:
+  - all
+  remote_user: root
+  tasks:
+    - name: get sim repo
+      git:
+        repo: https://github.com/eva-ics/sim
+        dest: /build/sim
+        clone: yes
+        update: yes
