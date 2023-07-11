@@ -67,7 +67,7 @@ for t in targets:
     for f in binaries:
         sh(f'cp -vf {work_dir}/target/{t["target"]}/release/{f} .')
         tpl_file = f'svc-tpl-{f}.yml'
-        with open(f'{work_dir}/{tpl_file}') as fh:
+        with open(f'{work_dir}/svc-tpl/{tpl_file}') as fh:
             content = fh.read().replace('/opt/sim/target/debug/',
                                         '/opt/eva4/sim/')
             with open(tpl_file, 'w') as fout:
