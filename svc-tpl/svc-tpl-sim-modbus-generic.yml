@@ -2,7 +2,7 @@ command: /opt/sim/target/debug/sim-modbus-generic
 bus:
   path: var/bus.ipc
 config:
-  port_svc: sim.modbus.tcp1
+  port_svc: sim.modbus1.port
   unit: 1
   persistent: true
 user: eva
