@@ -1,0 +1,8 @@
+get:
+  des: Get the sensor value
+  par:
+  ret: The sensor value
+  exm: |
+    {
+        "value": 25
+    }

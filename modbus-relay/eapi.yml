@@ -1,0 +1,15 @@
+get:
+  des: Get relay ports status
+  par:
+  ret: Relay ports status
+  exm: |
+    {
+        "port1": 0,
+        "port2": 0,
+        "port3": 1,
+        "port4": 0,
+        "port5": 0,
+        "port6": 1,
+        "port7": 1,
+        "port8": 1
+    }
