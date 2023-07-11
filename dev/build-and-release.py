@@ -66,7 +66,12 @@ for t in targets:
     os.chdir(d)
     for f in binaries:
         sh(f'cp -vf {work_dir}/target/{t["target"]}/release/{f} .')
-    sh(f'cp -vf {work_dir}/svc-tpl/* .')
+        tpl_file = f'svc-tpl-{f}.yml'
+        with open(f'{work_dir}/{tpl_file}') as fh:
+            content = fh.read().replace('/opt/sim/target/debug/',
+                                        '/opt/eva4/sim/')
+            with open(tpl_file, 'w') as fout:
+                fout.write(content)
     os.chdir('..')
     sh(f'tar czvf {tarball} {name}')
     tarballs.append(tarball)

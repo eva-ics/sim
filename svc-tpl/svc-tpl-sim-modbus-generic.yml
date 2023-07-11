@@ -1,4 +1,4 @@
-command: /opt/workstuff/sim/modbus-generic/target/debug/sim-modbus-generic
+command: /opt/sim/target/debug/sim-modbus-generic
 bus:
   path: var/bus.ipc
 config:

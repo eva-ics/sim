@@ -1,4 +1,4 @@
-command: /opt/workstuff/sim/modbus-sensor/target/debug/sim-modbus-sensor
+command: /opt/sim/target/debug/sim-modbus-sensor
 bus:
   path: var/bus.ipc
 config:
