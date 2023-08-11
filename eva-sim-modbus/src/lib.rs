@@ -27,6 +27,9 @@ pub async fn init(port_svc: &str, client: &mut dyn AsyncClient) -> EResult<()> {
     Ok(())
 }
 
+/// # Panics
+///
+/// Will panic if BUS_TOPIC_IN not set
 pub async fn process_modbus_frame<
     const C: usize,
     const D: usize,

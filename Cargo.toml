@@ -5,6 +5,8 @@ members = [
   "modbus-generic",
   "modbus-sensor",
   "modbus-relay",
+  "ads-port",
+  "ads-service",
 ]
 
 [profile.release]

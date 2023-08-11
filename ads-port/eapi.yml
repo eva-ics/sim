@@ -1,0 +1,13 @@
+list:
+  des: List ADS services
+  par:
+  ret: ADS Service list
+  exm: |
+    [
+      "ams_addr": "127.0.0.1.1.1:200",
+      "svc_id": "sim.ads.dev1.core",
+      "ams_addr": "127.0.0.1.1.1:851",
+      "svc_id": "sim.ads.dev1.plc1",
+      "ams_addr": "127.0.0.1.1.1:852",
+      "svc_id": "sim.ads.dev1.plc2"
+    ]

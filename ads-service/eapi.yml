@@ -1,0 +1,71 @@
+handle.list:
+  des: List allocated ADS handles
+  par:
+  ret: ADS handle list
+  exm: |
+    {
+        "676bb393-cab0-42a0-8400-35a3ecdae205": [
+            {
+                "id": 1,
+                "index_group": 16448,
+                "index_offset": 0,
+                "size": 4
+            }
+        ]
+    }
+state.get:
+  des: Get current ADS device state
+  par:
+  ret: ADS state
+  exm: |
+    {
+        "state": "run"
+    }
+state.set:
+  des: Set ADS device state
+  par:
+    nam: state
+    typ: String
+    des: ADS state
+    req: true
+  ret:
+var.get:
+  des: Get symbol value
+  par:
+    - nam: i
+      typ: String
+      des: Symbol name
+      req: true
+  ret: Symbol value
+var.set:
+  des: Set symbol value
+  par:
+    - nam: i
+      typ: String
+      des: Symbol name
+      req: true
+    - nam: value
+      typ: Any
+      des: value to set
+      req: true
+  ret:
+var.list:
+  des: List virtual variables
+  par:
+    - nam: full
+      typ: bool
+      des: Full output (name/value)
+      req: false
+  ret: Symbols and their values
+  exm: |
+    [
+        {
+            "name": "MAIN.var1"
+        },
+        {
+            "name": "MAIN.var2"
+        },
+        {
+            "name": "MAIN.var3"
+        }
+    ]

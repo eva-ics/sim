@@ -1,4 +1,4 @@
-get:
+var.get:
   des: Get the sensor value
   par:
   ret: The sensor value
@@ -6,3 +6,11 @@ get:
     {
         "value": 25
     }
+var.set:
+  des: Set the sensor value
+  par:
+    - nam: value
+      typ: Any
+      des: Sensor value
+      req: true
+  ret:

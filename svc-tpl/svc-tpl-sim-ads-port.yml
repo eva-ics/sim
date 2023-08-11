@@ -1,0 +1,7 @@
+command: /opt/sim/target/debug/sim-ads-port
+bus:
+  path: var/bus.ipc
+config:
+  listen: 127.0.0.1:48898
+  verbose: true
+user: nobody

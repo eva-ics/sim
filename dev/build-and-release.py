@@ -36,7 +36,7 @@ targets = [{
 
 binaries = [
     'sim-modbus-generic', 'sim-modbus-port', 'sim-modbus-relay',
-    'sim-modbus-sensor'
+    'sim-modbus-sensor', 'sim-ads-port', 'sim-ads-service'
 ]
 
 tarballs = []

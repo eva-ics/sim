@@ -1,7 +1,7 @@
 #!/bin/sh
 
 REPO=https://pub.bma.ai/sim
-BINARIES='sim-modbus-generic sim-modbus-port sim-modbus-relay sim-modbus-sensor'
+BINARIES='sim-modbus-generic sim-modbus-port sim-modbus-relay sim-modbus-sensor sim-ads-port sim-ads-service'
 
 FULL_NAME='EVA ICS Virtual Fieldbus Simulator'
 

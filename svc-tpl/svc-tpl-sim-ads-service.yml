@@ -1,0 +1,17 @@
+command: /opt/sim/target/debug/sim-ads-service
+bus:
+  path: var/bus.ipc
+config:
+  ams_addr: 127.0.0.1.1.1:851
+  port_svc: sim.ads.port1
+  verbose: true
+  # auto cleanup client handles
+  auto_cleanup: true
+  #symbols:
+  #- name: MAIN.test1
+    #size: 5
+    # valid values: NULL, SINT, USINT, INT, UINT, DINT, UDINT, LINT, ULINT
+    # REAL, LREAL, BIG, STRING, WSTRING, REAL80, BIT, MAX
+    #type: DINT
+    # possible values: none, random, timestamp, counter, udp
+user: nobody

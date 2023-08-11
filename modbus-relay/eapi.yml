@@ -1,4 +1,4 @@
-get:
+var.get:
   des: Get relay ports status
   par:
   ret: Relay ports status

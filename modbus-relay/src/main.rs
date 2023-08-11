@@ -37,7 +37,7 @@ impl RpcHandlers for Handlers {
         let payload = event.payload();
         #[allow(clippy::match_single_binding)]
         match method {
-            "get" =>
+            "var.get" =>
             {
                 #[allow(clippy::cast_possible_wrap)]
                 if payload.is_empty() {
@@ -118,7 +118,7 @@ async fn main(mut initial: Initial) -> EResult<()> {
             .ok_or_else(|| Error::invalid_data("config not specified"))?,
     )?;
     let mut info = ServiceInfo::new(AUTHOR, VERSION, DESCRIPTION);
-    info.add_method(ServiceMethod::new("get"));
+    info.add_method(ServiceMethod::new("var.get"));
     let rpc = initial
         .init_rpc(Handlers {
             info,

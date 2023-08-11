@@ -1,0 +1,16 @@
+[package]
+name = "eva-ads-common"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+binrw = "0.11.2"
+bmart-derive = "0.1.3"
+double-map = "0.14.0"
+eva-common = "0.3.2"
+once_cell = "1.18.0"
+serde = { version = "1.0.183", features = ["derive"] }
+serde_repr = "0.1.16"
+unicase = "2.6.0"
