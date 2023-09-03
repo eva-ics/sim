@@ -4,7 +4,7 @@ handle.list:
   ret: ADS handle list
   exm: |
     {
-        "676bb393-cab0-42a0-8400-35a3ecdae205": [
+        "127.0.0.1:54391": [
             {
                 "id": 1,
                 "index_group": 16448,
@@ -24,10 +24,10 @@ state.get:
 state.set:
   des: Set ADS device state
   par:
-    nam: state
-    typ: String
-    des: ADS state
-    req: true
+    - nam: state
+      typ: String
+      des: ADS state
+      req: true
   ret:
 var.get:
   des: Get symbol value
@@ -50,7 +50,7 @@ var.set:
       req: true
   ret:
 var.list:
-  des: List virtual variables
+  des: List symbols
   par:
     - nam: full
       typ: bool
