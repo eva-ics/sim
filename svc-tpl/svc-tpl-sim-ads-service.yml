@@ -9,9 +9,9 @@ config:
   auto_cleanup: true
   #symbols:
   #- name: MAIN.test1
+    # set size > 0 for arrays
     #size: 5
     # valid values: NULL, SINT, USINT, INT, UINT, DINT, UDINT, LINT, ULINT
     # REAL, LREAL, BIG, STRING, WSTRING, REAL80, BIT, MAX
     #type: DINT
-    # possible values: none, random, timestamp, counter, udp
 user: nobody
