@@ -6,6 +6,7 @@ use double_map::DHashMap;
 use eva_common::value::Value;
 use eva_common::{EResult, Error};
 use serde::{Deserialize, Serialize};
+use std::borrow::Cow;
 use std::collections::{btree_map::Entry, BTreeMap};
 use std::hash::{Hash, Hasher};
 use std::io::{Cursor, Write};
@@ -374,7 +375,14 @@ impl<'a> VariableEntry<'a> {
     }
     pub fn packed_info_ex(&self) -> Result<Vec<u8>, AdsError> {
         let var_name = self.name.as_bytes();
-        let data_type_name = self.data_type.as_str().as_bytes();
+        let data_type_name: Cow<[u8]> = if self.array_len == 0 {
+            self.data_type.as_str().as_bytes().into()
+        } else {
+            format!("ARRAY [0..{}] of {}", self.array_len - 1, self.data_type)
+                .as_bytes()
+                .to_vec()
+                .into()
+        };
         let var_comment = self.comment.as_ref().map(|v| v.as_bytes());
         let length =
             33 + var_name.len() + data_type_name.len() + var_comment.map_or(0, <[u8]>::len);
@@ -394,7 +402,7 @@ impl<'a> VariableEntry<'a> {
         info.write(&mut buf)?;
         buf.write_all(var_name)?;
         buf.write_all(&[0x20])?;
-        buf.write_all(data_type_name)?;
+        buf.write_all(&data_type_name)?;
         buf.write_all(&[0x20])?;
         if let Some(c) = var_comment {
             buf.write_all(c)?;
